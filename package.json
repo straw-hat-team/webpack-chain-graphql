@@ -1,13 +1,18 @@
 {
-  "name": "@straw-hat/CHANGE_ME_PACKAGE_NAME",
-  "version": "0.0.1",
-  "description": "CHANGE_ME_DESCRIPTION",
+  "name": "@straw-hat/webpack-chain-graphql",
+  "version": "1.0.0",
+  "description": "Webpack Chain preset for adding GraphQL file support",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/CHANGE_ME_REPO_NAME.git"
+    "url": "https://github.com/straw-hat-team/webpack-chain-graphql.git"
   },
   "license": "MIT",
   "keywords": [
+    "webpack-chain",
+    "neutrino",
+    "neutrino-preset",
+    "graphql",
+    "qql",
     "straw-hat-team"
   ],
   "publishConfig": {
@@ -16,7 +21,6 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.prod.json",
-    "test": "jest",
     "prepublishOnly": "yarn build"
   },
   "type": "commonjs",
@@ -26,13 +30,17 @@
     "dist",
     "README.md"
   ],
+  "peerDependencies": {
+    "graphql-tag": "^2.9.2"
+  },
   "devDependencies": {
-    "@straw-hat/tsconfig": "^2.1.0",
     "@straw-hat/prettier-config": "^1.1.0",
+    "@straw-hat/tsconfig": "^2.1.0",
     "@types/jest": "^26.0.14",
     "jest": "^26.5.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.1",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "webpack-chain": "^6.5.1"
   }
 }
